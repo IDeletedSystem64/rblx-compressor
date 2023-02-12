@@ -38,6 +38,7 @@ namespace WindowsFormsApp3
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.versionString = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -64,13 +65,12 @@ namespace WindowsFormsApp3
             // 
             // selectButton
             // 
-            this.selectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.selectButton.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.selectButton.Location = new System.Drawing.Point(12, 30);
             this.selectButton.Name = "selectButton";
             this.selectButton.Size = new System.Drawing.Size(336, 23);
             this.selectButton.TabIndex = 2;
-            this.selectButton.Text = "Select File";
+            this.selectButton.Text = "Select Place";
             this.selectButton.UseVisualStyleBackColor = true;
             this.selectButton.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -87,7 +87,7 @@ namespace WindowsFormsApp3
             // processStatus
             // 
             this.processStatus.AutoSize = true;
-            this.processStatus.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.processStatus.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.processStatus.Location = new System.Drawing.Point(60, 14);
             this.processStatus.Name = "processStatus";
             this.processStatus.Size = new System.Drawing.Size(78, 13);
@@ -97,7 +97,7 @@ namespace WindowsFormsApp3
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.linkLabel1.Location = new System.Drawing.Point(9, 80);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(259, 13);
@@ -130,12 +130,22 @@ namespace WindowsFormsApp3
             this.linkLabel3.Text = "system64.dev";
             this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
+            // versionString
+            // 
+            this.versionString.AutoSize = true;
+            this.versionString.Location = new System.Drawing.Point(339, 3);
+            this.versionString.Name = "versionString";
+            this.versionString.Size = new System.Drawing.Size(22, 13);
+            this.versionString.TabIndex = 9;
+            this.versionString.Text = "1.0";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(362, 109);
+            this.Controls.Add(this.versionString);
             this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
@@ -147,7 +157,9 @@ namespace WindowsFormsApp3
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Place Compressor";
+            this.Load += new System.EventHandler(this.MainWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,6 +175,7 @@ namespace WindowsFormsApp3
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.Label versionString;
     }
 }
 
