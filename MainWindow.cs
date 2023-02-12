@@ -16,6 +16,7 @@ namespace WindowsFormsApp3
     public partial class MainWindow : Form
     {
         private string currFile;
+        private bool successful;
 
         public MainWindow()
         {
@@ -49,22 +50,24 @@ namespace WindowsFormsApp3
                             {
                                 compressor.Write(buffer, 0, n);
                             }
+                            successful = true;
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    processStatus.Text = "Error"; // this doesn't actually work, since it goes to the "finished" message instead, hm.
+                    successful = false;
                     MessageBox.Show("Something went wrong: \n" + ex.Message, "Place Compressor - Oh Noes!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     throw;
                 }
                 finally
                 {
-                    processStatus.Text = "Compression finished!";
+                    if (!successful) {   processStatus.Text = "Error"; }
+                    else { processStatus.Text = "Compression finished!"; }
                 }
-                
+
+                }
             }
-        }
         private void button1_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
