@@ -30,18 +30,13 @@ namespace WindowsFormsApp3
             var newFile = currFile + ".bz2";
             var input = File.OpenRead(currFile);
             var output = File.Create(newFile);
-            /*
-            if (File.Exists(newFile))
-            {
-                MessageBox.Show("The file " + newFile + " already exists, are you sure you want to continue? This will overwrite the existing file.","Map Compressor - Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            } // If the output file already exists, Prompt the user weather or not they want to continue. 
-            else
-            */
+                        
             {
                 try
                 {
                     {
                         processStatus.Text = "Compressing...";
+                        selectButton.Enabled = false; // Let's not allow the user to select another map while one is already compressing...
                         using (var compressor = new Ionic.BZip2.ParallelBZip2OutputStream(output))
                         {
                             byte[] buffer = new byte[2048];
@@ -62,6 +57,7 @@ namespace WindowsFormsApp3
                 }
                 finally
                 {
+                    selectButton.Enabled = true;
                     if (!successful) {   processStatus.Text = "Error"; }
                     else { processStatus.Text = "Compression finished!"; }
                 }

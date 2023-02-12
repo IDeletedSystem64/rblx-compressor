@@ -32,7 +32,7 @@ namespace WindowsFormsApp3
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.label1 = new System.Windows.Forms.Label();
             this.currentFile = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.selectButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.processStatus = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -62,17 +62,17 @@ namespace WindowsFormsApp3
             this.currentFile.TabIndex = 1;
             this.currentFile.Text = "currfile";
             // 
-            // button1
+            // selectButton
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.button1.Location = new System.Drawing.Point(12, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(336, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Select File";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.selectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.selectButton.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.selectButton.Location = new System.Drawing.Point(12, 30);
+            this.selectButton.Name = "selectButton";
+            this.selectButton.Size = new System.Drawing.Size(336, 23);
+            this.selectButton.TabIndex = 2;
+            this.selectButton.Text = "Select File";
+            this.selectButton.UseVisualStyleBackColor = true;
+            this.selectButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -141,7 +141,7 @@ namespace WindowsFormsApp3
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.processStatus);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.selectButton);
             this.Controls.Add(this.currentFile);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -157,7 +157,7 @@ namespace WindowsFormsApp3
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label currentFile;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button selectButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label processStatus;
         private System.Windows.Forms.LinkLabel linkLabel1;
