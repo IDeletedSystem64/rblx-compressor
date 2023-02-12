@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WindowsFormsApp3")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("ROBLOX Place Compressor Tool")]
+[assembly: AssemblyDescription("A easy to use tool for compressing ROBLOX places to bz2 (bzip2) format for use in Novetus")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WindowsFormsApp3")]
-[assembly: AssemblyCopyright("Copyright ©  2023")]
+[assembly: AssemblyCompany("System64 Technologies")]
+[assembly: AssemblyProduct("RBLXPlaceCompressor")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -41,7 +41,6 @@ namespace WindowsFormsApp3
                 {
                     {
                         processStatus.Text = "Compressing...";
-
                         using (var compressor = new Ionic.BZip2.ParallelBZip2OutputStream(output))
                         {
                             byte[] buffer = new byte[2048];
@@ -53,15 +52,15 @@ namespace WindowsFormsApp3
                         }
                     }
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    // MessageBox.Show(Exception.Message, "Place Compressor - Oh Noes!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    processStatus.Text = "Error"; // this doesn't actually work, since it goes to the "finished" message instead, hm.
+                    MessageBox.Show("Something went wrong: \n" + ex.Message, "Place Compressor - Oh Noes!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     throw;
                 }
-                
                 finally
                 {
-                processStatus.Text = "Compression finished!";
+                    processStatus.Text = "Compression finished!";
                 }
                 
             }
