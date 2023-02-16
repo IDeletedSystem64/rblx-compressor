@@ -45,7 +45,7 @@ namespace WindowsFormsApp3
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(12, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 13);
@@ -56,7 +56,7 @@ namespace WindowsFormsApp3
             // 
             this.currentFile.AutoSize = true;
             this.currentFile.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.currentFile.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.currentFile.ForeColor = System.Drawing.SystemColors.Control;
             this.currentFile.Location = new System.Drawing.Point(81, 56);
             this.currentFile.Name = "currentFile";
             this.currentFile.Size = new System.Drawing.Size(43, 13);
@@ -65,19 +65,23 @@ namespace WindowsFormsApp3
             // 
             // selectButton
             // 
+            this.selectButton.BackColor = System.Drawing.Color.Gray;
+            this.selectButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.selectButton.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.selectButton.ForeColor = System.Drawing.SystemColors.Control;
             this.selectButton.Location = new System.Drawing.Point(12, 30);
             this.selectButton.Name = "selectButton";
             this.selectButton.Size = new System.Drawing.Size(336, 23);
             this.selectButton.TabIndex = 2;
             this.selectButton.Text = "Select Place";
-            this.selectButton.UseVisualStyleBackColor = true;
+            this.selectButton.UseVisualStyleBackColor = false;
             this.selectButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(12, 14);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 13);
@@ -88,6 +92,7 @@ namespace WindowsFormsApp3
             // 
             this.processStatus.AutoSize = true;
             this.processStatus.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.processStatus.ForeColor = System.Drawing.SystemColors.Control;
             this.processStatus.Location = new System.Drawing.Point(60, 14);
             this.processStatus.Name = "processStatus";
             this.processStatus.Size = new System.Drawing.Size(78, 13);
@@ -98,6 +103,8 @@ namespace WindowsFormsApp3
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.linkLabel1.ForeColor = System.Drawing.SystemColors.Control;
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
             this.linkLabel1.Location = new System.Drawing.Point(9, 80);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(259, 13);
@@ -110,6 +117,8 @@ namespace WindowsFormsApp3
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.linkLabel2.ForeColor = System.Drawing.SystemColors.Control;
+            this.linkLabel2.LinkColor = System.Drawing.Color.White;
             this.linkLabel2.Location = new System.Drawing.Point(290, 67);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(44, 13);
@@ -122,6 +131,8 @@ namespace WindowsFormsApp3
             // 
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.linkLabel3.ForeColor = System.Drawing.SystemColors.Control;
+            this.linkLabel3.LinkColor = System.Drawing.Color.White;
             this.linkLabel3.Location = new System.Drawing.Point(276, 80);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(74, 13);
@@ -133,17 +144,18 @@ namespace WindowsFormsApp3
             // versionString
             // 
             this.versionString.AutoSize = true;
+            this.versionString.ForeColor = System.Drawing.SystemColors.Control;
             this.versionString.Location = new System.Drawing.Point(339, 3);
             this.versionString.Name = "versionString";
             this.versionString.Size = new System.Drawing.Size(22, 13);
             this.versionString.TabIndex = 9;
-            this.versionString.Text = "1.0";
+            this.versionString.Text = "1.1";
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(362, 109);
             this.Controls.Add(this.versionString);
             this.Controls.Add(this.linkLabel3);
