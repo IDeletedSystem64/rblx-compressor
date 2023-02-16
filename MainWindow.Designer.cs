@@ -1,5 +1,5 @@
 ﻿
-namespace WindowsFormsApp3
+namespace RBLXCompressor
 {
     partial class MainWindow
     {
@@ -35,9 +35,9 @@ namespace WindowsFormsApp3
             this.selectButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.processStatus = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.novetusLink = new System.Windows.Forms.LinkLabel();
+            this.githubLink = new System.Windows.Forms.LinkLabel();
+            this.personalWebLink = new System.Windows.Forms.LinkLabel();
             this.versionString = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -99,47 +99,47 @@ namespace WindowsFormsApp3
             this.processStatus.TabIndex = 5;
             this.processStatus.Text = "processStatus";
             // 
-            // linkLabel1
+            // novetusLink
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.linkLabel1.ForeColor = System.Drawing.SystemColors.Control;
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(9, 80);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(259, 13);
-            this.linkLabel1.TabIndex = 6;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Also check out Novetus! an old ROBLOX launcher";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.novetusLink.AutoSize = true;
+            this.novetusLink.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.novetusLink.ForeColor = System.Drawing.SystemColors.Control;
+            this.novetusLink.LinkColor = System.Drawing.Color.White;
+            this.novetusLink.Location = new System.Drawing.Point(9, 80);
+            this.novetusLink.Name = "novetusLink";
+            this.novetusLink.Size = new System.Drawing.Size(259, 13);
+            this.novetusLink.TabIndex = 6;
+            this.novetusLink.TabStop = true;
+            this.novetusLink.Text = "Also check out Novetus! an old ROBLOX launcher";
+            this.novetusLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // linkLabel2
+            // githubLink
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.linkLabel2.ForeColor = System.Drawing.SystemColors.Control;
-            this.linkLabel2.LinkColor = System.Drawing.Color.White;
-            this.linkLabel2.Location = new System.Drawing.Point(290, 67);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(44, 13);
-            this.linkLabel2.TabIndex = 7;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "GitHub";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.githubLink.AutoSize = true;
+            this.githubLink.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.githubLink.ForeColor = System.Drawing.SystemColors.Control;
+            this.githubLink.LinkColor = System.Drawing.Color.White;
+            this.githubLink.Location = new System.Drawing.Point(290, 67);
+            this.githubLink.Name = "githubLink";
+            this.githubLink.Size = new System.Drawing.Size(44, 13);
+            this.githubLink.TabIndex = 7;
+            this.githubLink.TabStop = true;
+            this.githubLink.Text = "GitHub";
+            this.githubLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // linkLabel3
+            // personalWebLink
             // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.linkLabel3.ForeColor = System.Drawing.SystemColors.Control;
-            this.linkLabel3.LinkColor = System.Drawing.Color.White;
-            this.linkLabel3.Location = new System.Drawing.Point(276, 80);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(74, 13);
-            this.linkLabel3.TabIndex = 8;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "system64.dev";
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            this.personalWebLink.AutoSize = true;
+            this.personalWebLink.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.personalWebLink.ForeColor = System.Drawing.SystemColors.Control;
+            this.personalWebLink.LinkColor = System.Drawing.Color.White;
+            this.personalWebLink.Location = new System.Drawing.Point(276, 80);
+            this.personalWebLink.Name = "personalWebLink";
+            this.personalWebLink.Size = new System.Drawing.Size(74, 13);
+            this.personalWebLink.TabIndex = 8;
+            this.personalWebLink.TabStop = true;
+            this.personalWebLink.Text = "system64.dev";
+            this.personalWebLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // versionString
             // 
@@ -156,11 +156,11 @@ namespace WindowsFormsApp3
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(362, 109);
+            this.ClientSize = new System.Drawing.Size(364, 111);
             this.Controls.Add(this.versionString);
-            this.Controls.Add(this.linkLabel3);
-            this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.personalWebLink);
+            this.Controls.Add(this.githubLink);
+            this.Controls.Add(this.novetusLink);
             this.Controls.Add(this.processStatus);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.selectButton);
@@ -183,9 +183,9 @@ namespace WindowsFormsApp3
         private System.Windows.Forms.Button selectButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label processStatus;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.LinkLabel novetusLink;
+        private System.Windows.Forms.LinkLabel githubLink;
+        private System.Windows.Forms.LinkLabel personalWebLink;
         private System.Windows.Forms.Label versionString;
     }
 }

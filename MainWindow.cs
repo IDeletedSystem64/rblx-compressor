@@ -11,7 +11,7 @@ using System.IO;
 using System.Windows.Forms;
 #endregion
 
-namespace WindowsFormsApp3
+namespace RBLXCompressor
 {
     public partial class MainWindow : Form
     {
