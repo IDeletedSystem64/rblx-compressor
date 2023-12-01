@@ -1,14 +1,9 @@
 ﻿#region Using's
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
+using Ionic.BZip2;
 #endregion
 
 namespace RBLXCompressor
@@ -30,40 +25,43 @@ namespace RBLXCompressor
             var newFile = currFile + ".bz2";
             var input = File.OpenRead(currFile);
             var output = File.Create(newFile);
-                        
-            {
-                try
-                {
-                    {
-                        processStatus.Text = "Compressing...";
-                        selectButton.Enabled = false; // Let's not allow the user to select another map while one is already compressing...
-                        using (var compressor = new Ionic.BZip2.ParallelBZip2OutputStream(output))
-                        {
-                            byte[] buffer = new byte[2048];
-                            int n;
-                            while ((n = input.Read(buffer, 0, buffer.Length)) > 0)
-                            {
-                                compressor.Write(buffer, 0, n);
-                            }
-                            successful = true;
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    successful = false;
-                    MessageBox.Show("Something went wrong: \n" + ex.Message, "Place Compressor - Oh Noes!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    throw;
-                }
-                finally
-                {
-                    selectButton.Enabled = true;
-                    if (!successful) {   processStatus.Text = "Error"; }
-                    else { processStatus.Text = "Compression finished!"; }
-                }
 
+            try
+            {
+                processStatus.Text = "Compressing...";
+                selectButton.Enabled = false; // Let's not allow the user to select another map while one is already compressing...
+                using (var compressor = new ParallelBZip2OutputStream(output))
+                {
+                    byte[] buffer = new byte[2048];
+                    int n;
+                    while ((n = input.Read(buffer, 0, buffer.Length)) > 0)
+                    {
+                        compressor.Write(buffer, 0, n);
+                    }
+                    successful = true;
                 }
             }
+            catch (Exception ex)
+            {
+                successful = false;
+                MessageBox.Show("Something went wrong: \n" + ex.Message, "Place Compressor - Oh Noes!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+            finally
+            {
+                selectButton.Enabled = true;
+
+                if (!successful) 
+                { 
+                    processStatus.Text = "Error"; 
+                }
+                else 
+                { 
+                    processStatus.Text = "Compression finished!"; 
+                }
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -82,17 +80,17 @@ namespace RBLXCompressor
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://bitl.itch.io/novetus");
+            Process.Start("https://bitl.itch.io/novetus");
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/IDeletedSystem64/rblx-compressor");
+            Process.Start("https://github.com/IDeletedSystem64/rblx-compressor");
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://system64.dev");
+            Process.Start("https://system64.dev");
         }
     }
 }
