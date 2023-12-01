@@ -14,5 +14,6 @@ This project requires Visual Studio 2019 at least (It might work with older vers
 Compressing for Sodikm (which uses *.gz format)\
 Batch compression (compress multiple maps at once into their own files) 
 
+This project uses icons from https://github.com/legacy-icons/famfamfam-silk
 
 ![A flat badge saying "Built With" with a heart next to it](https://forthebadge.com/images/badges/built-with-love.svg)
